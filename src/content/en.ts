@@ -1,0 +1,107 @@
+import type { Content } from "./types";
+
+export const en: Content = {
+  nav: { about: "About", work: "Work", experience: "Experience", skills: "Skills", cta: "Get in touch" },
+  hero: {
+    eyebrow: "Software Engineer",
+    name1: "Manuel",
+    name2: "Rodriguez",
+    role: "Software Engineering Expert · React / React Native",
+    intro:
+      "I build and scale mobile applications, focusing on performance, reliability, and real-world impact.",
+    chips: ["Tech Lead @ Qubika", "React Native specialist", "AI-assisted development"],
+    ctaWork: "View projects",
+    ctaContact: "Contact",
+  },
+  clientsLabel: "Trusted by teams at",
+  about: {
+    kicker: "About",
+    title: "Senior engineering, product-first.",
+    paras: [
+      "I'm a Software Engineering Expert (Tech Lead) focused on React and React Native, with experience building mobile applications and leading teams through complex technical challenges.",
+      "I've also been involved in initiatives around AI-assisted development and innovation, helping teams adopt new tools and ways of working in a practical, real-world way.",
+      "Beyond delivery, I enjoy mentoring, sharing knowledge, and contributing to the growth of other developers.",
+      "I'm especially interested in digging into complex problems, understanding how things work under the hood, and building solutions that hold up in real-world scenarios.",
+    ],
+  },
+  work: { kicker: "Featured work", title: "Real products, in production." },
+  projects: [
+    {
+      n: "01",
+      tag: "Production app",
+      title: "Pasión Mi Club",
+      role: "React Native Lead",
+      desc: "A mobile app for sports communities and club engagement — members join matches (football and more), manage a wallet and payments, and reach a wider services ecosystem spanning transport, food and more.",
+      points: [
+        "Frontend / React Native lead — architecture decisions",
+        "Performance and UX across a complex, real-time domain",
+        "Backend integration over GraphQL and REST APIs",
+      ],
+      tags: ["React Native", "GraphQL", "Payments", "Real-time"],
+      link: "https://www.pasionmiclub.com/",
+      linkLabel: "pasionmiclub.com",
+      shot: "Pasión Mi Club — app screenshot",
+    },
+    {
+      n: "02",
+      tag: "Personal product",
+      title: "Miga",
+      role: "Solo · end-to-end",
+      desc: "A personal project taken from idea to shipped app. I owned every layer — product thinking, architecture and technical decisions — building beyond client work to solve a problem I cared about.",
+      points: [
+        "End-to-end ownership, designed and built solo",
+        "Product thinking driving each technical decision",
+        "Shipped and maintained independently",
+      ],
+      tags: ["React Native", "Expo", "Product"],
+      link: "https://migatheapp.org/",
+      linkLabel: "migatheapp.org",
+      shot: "Miga — app screenshot",
+    },
+  ],
+  exp: { kicker: "Experience", title: "Where I’ve worked." },
+  jobs: [
+    {
+      company: "Qubika",
+      role: "Software Engineering Expert · Tech Lead",
+      period: "Present",
+      link: "https://qubika.com",
+      linkLabel: "qubika.com",
+      points: [
+        "Lead frontend efforts across teams — architecture decisions, complex debugging and technical direction for scalable mobile apps.",
+        "Accelerate AI Studio — integrating AI tools into real engineering, product and design workflows.",
+        "Innovation Team lead — researching new tech, validating ideas with POCs, sharing findings in internal talks.",
+        "Built the React Native training path; contributed to career frameworks, internal talks and interviews.",
+      ],
+    },
+    {
+      company: "Nareia",
+      role: "Mobile Developer · Xamarin.Forms",
+      period: "Earlier",
+      link: "https://nareia.com.uy",
+      linkLabel: "nareia.com.uy",
+      points: [
+        "My first mobile experience, building with Xamarin.Forms.",
+        "Sharpened adaptability, ownership and close client collaboration.",
+      ],
+    },
+  ],
+  skills: { kicker: "Skills", title: "What I work with." },
+  skillGroups: [
+    { title: "Frontend / Mobile", items: ["React Native", "Expo", "TypeScript", "React"] },
+    {
+      title: "Architecture & Engineering",
+      items: ["Scalable frontend architecture", "Performance optimization", "Debugging complex issues"],
+    },
+    { title: "Tools & Ecosystem", items: ["React Query", "GraphQL / AWS Amplify", "Navigation", "Native modules"] },
+    { title: "Beyond code", items: ["AI-assisted development", "Mentoring", "Technical leadership"] },
+  ],
+  contact: {
+    kicker: "Contact",
+    title: "Let's build something reliable.",
+    sub: "Open to senior engineering and tech-lead work in React and React Native. The fastest ways to reach me:",
+    emailLabel: "Email",
+    linkedinLabel: "LinkedIn",
+  },
+  footer: "Built with care · 2026",
+};

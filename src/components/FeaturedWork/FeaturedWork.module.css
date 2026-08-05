@@ -1,0 +1,27 @@
+.section {
+  padding: clamp(56px, 9vh, 100px) 0;
+}
+
+.header {
+  margin-bottom: clamp(40px, 7vh, 72px);
+}
+
+.kicker {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(30px, 4.4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0;
+  max-width: 18ch;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 7vh, 80px);
+}

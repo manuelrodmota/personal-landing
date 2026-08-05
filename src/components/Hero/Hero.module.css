@@ -1,0 +1,92 @@
+.header {
+  padding: clamp(72px, 13vh, 150px) 0 clamp(56px, 9vh, 110px);
+}
+
+.rise {
+  display: inline-block;
+  animation: rise 0.9s both cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(0.34em); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}
+
+.kickerRow {
+  animation-delay: 0.05s;
+  margin-bottom: 34px;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(60px, 12.5vw, 168px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  margin: 0 0 28px;
+  margin-left: -0.04em;
+}
+
+.name1 {
+  animation-delay: 0.12s;
+}
+
+.name2 {
+  animation-delay: 0.24s;
+  color: color-mix(in srgb, var(--color-text) 62%, transparent);
+}
+
+.role {
+  animation-delay: 0.42s;
+  font-family: var(--font-heading);
+  font-size: clamp(17px, 2vw, 22px);
+  color: var(--color-accent-300);
+  letter-spacing: -0.01em;
+  margin: 0 0 22px;
+}
+
+.intro {
+  animation-delay: 0.5s;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 56ch;
+  color: color-mix(in srgb, var(--color-text) 82%, transparent);
+  margin: 0 0 30px;
+}
+
+.chips {
+  animation-delay: 0.58s;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.chip {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.chip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.ctas {
+  animation-delay: 0.66s;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta {
+  height: 42px;
+  padding: 0 20px;
+  font-size: 15px;
+}

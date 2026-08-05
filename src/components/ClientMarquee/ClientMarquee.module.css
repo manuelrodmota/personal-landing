@@ -1,0 +1,57 @@
+.section {
+  position: relative;
+  z-index: 1;
+  background:
+    radial-gradient(900px 420px at 85% -40%, color-mix(in srgb, var(--color-section-glow) 60%, transparent), transparent 64%),
+    var(--color-section);
+  padding: 38px 0;
+  overflow: hidden;
+}
+
+.label {
+  max-width: 1180px;
+  margin: 0 auto 22px;
+  padding: 0 clamp(20px, 5vw, 64px);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 62%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 7vw, 90px);
+  padding-right: clamp(40px, 7vw, 90px);
+}
+
+.client {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(24px, 3.2vw, 40px);
+  letter-spacing: -0.02em;
+  color: color-mix(in srgb, var(--color-text) 58%, transparent);
+  transition: color 0.25s;
+  white-space: nowrap;
+}
+
+.client:hover {
+  color: var(--color-text);
+}

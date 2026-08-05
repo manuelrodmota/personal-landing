@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manuel Rodriguez — Portfolio
 
-## Getting Started
+Bilingual (EN/ES) personal portfolio, built with Next.js (App Router) and the
+**Nocturne** design system. Recreated from a high-fidelity HTML design handoff
+into typed, componentized React.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, static export)
+- TypeScript
+- CSS Modules — design tokens ported as CSS custom properties in `src/app/globals.css`
+- No UI framework/library — all components are hand-built to match the Nocturne spec pixel-for-pixel
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/content/` — typed EN/ES copy (`en.ts`, `es.ts`) and shared types
+- `src/context/` — language state, persisted to `localStorage`
+- `src/components/` — one folder per section/primitive, each with its own CSS module
+- `src/app/globals.css` — Nocturne design tokens, base styles, shared keyframes
 
-## Learn More
+## Adding real images
 
-To learn more about Next.js, take a look at the following resources:
+The headshot and two project screenshots are currently placeholders
+(`ImageSlot` renders a labeled box when no `src` is passed). Drop the real
+files into `public/images/` and pass a `src` prop to the `ImageSlot` usages in
+`src/components/About/About.tsx` and `src/components/FeaturedWork/Project.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploys to GitHub Pages automatically on push to `main` via
+`.github/workflows/deploy.yml`. It builds with `next build` (static export,
+`GITHUB_PAGES=true` sets the `/personal-landing` base path) and publishes the
+`out/` directory.
 
-## Deploy on Vercel
+Enable Pages once, in the repo's Settings → Pages → Source → **GitHub Actions**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Live at: https://manuelrodmota.github.io/personal-landing/

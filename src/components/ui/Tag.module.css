@@ -1,0 +1,25 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.accent {
+  background: var(--color-accent-800);
+  color: var(--color-accent-100);
+}
+
+.neutral {
+  background: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+}
+
+.outline {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
