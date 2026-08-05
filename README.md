@@ -37,10 +37,20 @@ files into `public/images/` and pass a `src` prop to the `ImageSlot` usages in
 ## Deployment
 
 Deploys to GitHub Pages automatically on push to `main` via
-`.github/workflows/deploy.yml`. It builds with `next build` (static export,
-`GITHUB_PAGES=true` sets the `/personal-landing` base path) and publishes the
-`out/` directory.
+`.github/workflows/deploy.yml`. It builds with `next build` (static export)
+and publishes the `out/` directory.
 
-Enable Pages once, in the repo's Settings → Pages → Source → **GitHub Actions**.
+One-time setup:
 
-Live at: https://manuelrodmota.github.io/personal-landing/
+1. Repo → Settings → Pages → Source → **GitHub Actions**.
+2. DNS (at the registrar): four `A` records on the apex host (`@`) pointing to
+   GitHub Pages' IPs (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`),
+   plus a `CNAME` record for `www` → `manuelrodmota.github.io`.
+3. Repo → Settings → Pages → Custom domain → `manuelrodmota.com`, then wait
+   for the DNS check to pass and enable **Enforce HTTPS**.
+
+`public/CNAME` (committed, contains `manuelrodmota.com`) keeps the custom
+domain set on every deploy — GitHub Pages otherwise resets it if the file is
+missing from the published output.
+
+Live at: https://manuelrodmota.com
