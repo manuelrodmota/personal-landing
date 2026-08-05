@@ -13,9 +13,15 @@ export function About() {
     <section id="about" className={styles.section}>
       <div className={styles.grid}>
         <Reveal>
-          <figure className={`lighten ${styles.figure}`}>
+          <figure className={styles.figure}>
             <div className={styles.photoFrame}>
-              <ImageSlot alt="Manuel Rodriguez headshot" shape="rounded" placeholder="Drop your headshot" />
+              <ImageSlot
+                src="/images/headshot.jpeg"
+                alt="Manuel Rodriguez headshot"
+                shape="rounded"
+                placeholder="Drop your headshot"
+                priority
+              />
             </div>
           </figure>
         </Reveal>

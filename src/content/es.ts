@@ -41,6 +41,7 @@ export const es: Content = {
       link: "https://www.pasionmiclub.com/",
       linkLabel: "pasionmiclub.com",
       shot: "Pasión Mi Club — captura de la app",
+      image: "/images/pasion-mi-club.png",
     },
     {
       n: "02",
@@ -57,6 +58,7 @@ export const es: Content = {
       link: "https://migatheapp.org/",
       linkLabel: "migatheapp.org",
       shot: "Miga — captura de la app",
+      image: "/images/miga.png",
     },
   ],
   exp: { kicker: "Experiencia", title: "Dónde trabajé." },

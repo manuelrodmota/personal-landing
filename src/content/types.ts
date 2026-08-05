@@ -39,6 +39,7 @@ export interface Project {
   link: string;
   linkLabel: string;
   shot: string;
+  image?: string;
 }
 
 export interface ExperienceContent {

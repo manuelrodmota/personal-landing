@@ -42,7 +42,7 @@ export function Project({ project }: { project: ProjectData }) {
 
       <figure className={styles.shotwrap}>
         <div className={styles.shot}>
-          <ImageSlot alt={project.shot} shape="rect" placeholder={project.shot} />
+          <ImageSlot src={project.image} alt={project.shot} shape="rect" placeholder={project.shot} />
         </div>
       </figure>
     </Reveal>
