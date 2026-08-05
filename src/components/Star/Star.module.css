@@ -1,0 +1,44 @@
+.star {
+  position: fixed;
+  right: clamp(18px, 3.5vw, 40px);
+  bottom: clamp(18px, 3.5vw, 40px);
+  z-index: 70;
+  width: clamp(112px, 15vw, 150px);
+  height: clamp(112px, 15vw, 150px);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.star:hover {
+  transform: scale(1.09);
+}
+
+.starSpin {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 8px 26px color-mix(in srgb, var(--color-accent) 55%, transparent));
+}
+
+.starSpin svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.starLabel {
+  grid-area: 1 / 1;
+  z-index: 1;
+  pointer-events: none;
+  width: 48%;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(11px, 1.5vw, 14px);
+  line-height: 1.12;
+  letter-spacing: 0.03em;
+  color: var(--color-bg);
+  text-transform: uppercase;
+}

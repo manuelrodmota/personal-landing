@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar/ScrollProgressBar";
 import { CursorGlow } from "@/components/CursorGlow/CursorGlow";
+import { Star } from "@/components/Star/Star";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,6 +34,7 @@ export default function RootLayout({
           <CursorGlow />
           <ScrollProgressBar />
           {children}
+          <Star />
         </LanguageProvider>
       </body>
     </html>

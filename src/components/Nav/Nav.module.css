@@ -72,7 +72,6 @@
   overflow: hidden;
   border: 1px solid var(--color-divider);
   border-radius: var(--radius-md);
-  height: 34px;
 }
 
 .segOpt {
@@ -112,7 +111,10 @@
   outline-offset: -2px;
 }
 
-.cta {
-  height: 34px;
-  white-space: nowrap;
+.flag {
+  display: block;
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-text) 22%, transparent);
 }

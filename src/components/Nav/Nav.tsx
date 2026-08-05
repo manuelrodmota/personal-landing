@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { Button } from "@/components/ui/Button";
+import { UkFlag, EsFlag } from "./Flags";
 import styles from "./Nav.module.css";
 
 const LINKS = [
@@ -30,18 +30,26 @@ export function Nav() {
 
       <div className={styles.seg} role="group" aria-label="Language">
         <label className={styles.segOpt}>
-          <input type="radio" name="mrp-lang" checked={isEn} onChange={() => setLang("en")} />
-          EN
+          <input
+            type="radio"
+            name="mrp-lang"
+            checked={isEn}
+            onChange={() => setLang("en")}
+            aria-label="English"
+          />
+          <UkFlag />
         </label>
         <label className={styles.segOpt}>
-          <input type="radio" name="mrp-lang" checked={isEs} onChange={() => setLang("es")} />
-          ES
+          <input
+            type="radio"
+            name="mrp-lang"
+            checked={isEs}
+            onChange={() => setLang("es")}
+            aria-label="Español"
+          />
+          <EsFlag />
         </label>
       </div>
-
-      <Button href="#contact" variant="primary" className={styles.cta}>
-        {t.nav.cta}
-      </Button>
     </nav>
   );
 }
