@@ -8,10 +8,15 @@
   --color-accent: #9184d9;
   --color-accent-100: #f5f4ff;
   --color-accent-300: #d2cefd;
+  --color-accent-400: #b5abfc;
+  --color-accent-600: #796cbf;
   --color-accent-700: #5d5294;
   --color-accent-800: #423a6a;
+  --color-accent-900: #2b2741;
 
   --color-neutral-100: #f3f5fe;
+  --color-neutral-500: #9397ab;
+  --color-neutral-600: #75798c;
   --color-neutral-700: #595d6c;
   --color-neutral-800: #3f424d;
 

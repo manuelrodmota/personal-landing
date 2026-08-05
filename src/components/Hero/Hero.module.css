@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   padding: clamp(72px, 13vh, 150px) 0 clamp(56px, 9vh, 110px);
 }
 
@@ -24,6 +25,8 @@
 }
 
 .name {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: clamp(60px, 12.5vw, 168px);

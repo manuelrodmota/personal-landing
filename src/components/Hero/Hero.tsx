@@ -4,6 +4,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { SectionKicker } from "@/components/SectionKicker/SectionKicker";
 import { Button } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
+import { HeroIllustration } from "./HeroIllustration";
 import styles from "./Hero.module.css";
 
 export function Hero() {
@@ -11,6 +12,8 @@ export function Hero() {
 
   return (
     <header className={styles.header}>
+      <HeroIllustration />
+
       <SectionKicker label={t.hero.eyebrow} className={`${styles.rise} ${styles.kickerRow}`} />
 
       <h1 className={styles.name}>
