@@ -8,9 +8,10 @@ interface ImageSlotProps {
   placeholder: string;
   priority?: boolean;
   sizes?: string;
+  fit?: "cover" | "contain";
 }
 
-export function ImageSlot({ src, alt, shape = "rect", placeholder, priority, sizes }: ImageSlotProps) {
+export function ImageSlot({ src, alt, shape = "rect", placeholder, priority, sizes, fit = "cover" }: ImageSlotProps) {
   const shapeClass = shape === "rounded" ? styles.rounded : styles.rect;
 
   return (
@@ -23,6 +24,7 @@ export function ImageSlot({ src, alt, shape = "rect", placeholder, priority, siz
           priority={priority}
           sizes={sizes ?? "(max-width: 820px) 90vw, 40vw"}
           className={styles.image}
+          style={{ objectFit: fit }}
         />
       ) : (
         <span className={styles.placeholder}>{placeholder}</span>

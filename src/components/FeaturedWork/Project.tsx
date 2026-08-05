@@ -7,7 +7,7 @@ import styles from "./Project.module.css";
 
 export function Project({ project }: { project: ProjectData }) {
   return (
-    <Reveal as="article" className={styles.article}>
+    <Reveal as="article" className={`${styles.article} ${project.wide ? styles.wide : ""}`}>
       <div>
         <div className={styles.meta}>
           <span className={styles.index}>{project.n}</span>
@@ -41,8 +41,14 @@ export function Project({ project }: { project: ProjectData }) {
       </div>
 
       <figure className={styles.shotwrap}>
-        <div className={styles.shot}>
-          <ImageSlot src={project.image} alt={project.shot} shape="rect" placeholder={project.shot} />
+        <div className={styles.shot} style={{ aspectRatio: project.aspect }}>
+          <ImageSlot
+            src={project.image}
+            alt={project.shot}
+            shape="rect"
+            placeholder={project.shot}
+            fit={project.fit}
+          />
         </div>
       </figure>
     </Reveal>

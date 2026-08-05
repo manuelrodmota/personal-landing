@@ -40,6 +40,9 @@ export interface Project {
   linkLabel: string;
   shot: string;
   image?: string;
+  aspect?: string;
+  fit?: "cover" | "contain";
+  wide?: boolean;
 }
 
 export interface ExperienceContent {

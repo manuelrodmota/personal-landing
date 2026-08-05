@@ -11,6 +11,16 @@
   }
 }
 
+.article.wide {
+  grid-template-columns: 1fr;
+}
+
+.article.wide .shotwrap {
+  max-width: 760px;
+  justify-self: start;
+  width: 100%;
+}
+
 .meta {
   display: flex;
   align-items: baseline;
@@ -99,7 +109,6 @@
   overflow: hidden;
   box-shadow: 0 0 0 1px var(--color-neutral-800), 0 24px 60px -34px rgba(0, 0, 0, 0.8);
   transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
-  aspect-ratio: 320 / 560;
 }
 
 .article:hover .shot {
