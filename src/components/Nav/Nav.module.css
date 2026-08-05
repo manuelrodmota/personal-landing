@@ -79,7 +79,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 0 12px;
+  padding: 9px 12px;
   font-size: 13px;
   cursor: pointer;
   color: color-mix(in srgb, var(--color-text) 72%, transparent);
